@@ -14,6 +14,13 @@ function App() {
           id: nanoid()
       }))
   }
+  function rollDice() {
+    setDice(generateAllNewDice())
+  }
+
+  const diceElements = dice.map(dieObj => (
+    <Die key={dieObj.id} value={dieObj.value} isHeld={dieObj.isHeld}/>)
+  )
 
   return (
     <main>
