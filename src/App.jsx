@@ -3,7 +3,7 @@ import Die from "./Die"
 import { nanoid } from "nanoid"
 import Confetti from "react-confetti"
 
-function App() {
+export default function App() {
   const [dice, setDice] = useState(generateAllNewDice())
 
   const gameWon = dice.every(die => die.isHeld) &&
@@ -58,4 +58,4 @@ function App() {
   )
 }
 
-export default App
+
